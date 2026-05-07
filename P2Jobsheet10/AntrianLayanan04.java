@@ -11,8 +11,8 @@ public class AntrianLayanan04 {
         this.max = max;
         this.data = new Mahasiswa04[max];
         this.front = 0;
-        this.rear = -1;
         this.size = 0;
+        this.rear = -1;
     }
 
     public boolean IsEmpty() {
@@ -32,7 +32,7 @@ public class AntrianLayanan04 {
     }
 
     public void lihatTerdepan() {
-        if (!IsEmpty()) {
+        if (IsEmpty()) {
             System.out.println("Antrian Kosong.");
         } else {
             System.out.println("Mahasiswa Terdepan: ");
@@ -44,6 +44,7 @@ public class AntrianLayanan04 {
     public void tampilkanSemua() {
         if (IsEmpty()) {
             System.out.println("Antrian Kosong.");
+            return;
         } 
         System.out.println("Daftar Mahasiswa Dalam Antrian:");
         System.out.println("NIM - NAMA - PRODI - KELAS");
@@ -87,5 +88,15 @@ public class AntrianLayanan04 {
         front = (front + 1) % max;
         size--;
         return mhs;
+    }
+
+    public void lihatAkhir() {
+        if (IsEmpty()) {
+            System.out.println("Antrian Kosong.");
+        } else {
+            System.out.println("Mahasiswa Paling Belakang:");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
     }
 }
