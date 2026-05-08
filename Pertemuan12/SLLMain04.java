@@ -29,7 +29,19 @@ public class SLLMain04 {
         }
 
         sll.print();
-        
+
+        System.out.println("Data Index 1: ");
+        sll.getData(1);
+
+        System.out.println("Data Mahasiswa an Bimon Berada Pada Index: " + sll.indexOf("Bimon"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
+
         // Mahasiswa04 mhs1 = new Mahasiswa04("24212200", "Alvaro", "1A", 4.0);
         // Mahasiswa04 mhs2 = new Mahasiswa04("23212201", "Bimon", "2B", 3.8);
         // Mahasiswa04 mhs3 = new Mahasiswa04("22212202", "Cintia", "3C", 3.5);
